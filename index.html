@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    .body {
+      width: 100%;
+      height: auto;
+      font-family: "Microsoft Yahei", simsun, arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    .head {
+      background: #2a779a;
+      width: 100%;
+      height: 89px;
+      position: absolute;
+      top: 0;
+    }
+
+    .head-tabs {
+      position: absolute;
+      width: 1000px;
+      height: 113px;
+      top: 35px;
+      left: 460px;
+    }
+
+    .head-item {
+      width: 108px;
+      display: inline-block;
+      color: white;
+      cursor: pointer;
+    }
+
+    .img {
+      width: 100%;
+      height: 600px;
+    }
+
+    .intro {
+      width: 800px;
+      margin: 0 auto;
+      margin-top: 151px;
+      font-size: 15px;
+      line-height: 33px;
+      margin-bottom: 58px;
+    }
+
+    .footer {
+      margin-top: 0px;
+      width: 100%;
+      min-width: 1000px;
+      height: 84px;
+      text-align: center;
+      cursor: default;
+      background: #e4e4e4;
+      position: absolute;
+      /* bottom: 0; */
+    }
+
+    .footer-txt {
+      text-align: center;
+      font-size: 12px;
+      line-height: 21px;
+      color: #888888;
+      margin-top: 20px;
+    }
+
+    .footer-a {
+      color: #888888;
+      text-decoration: none
+    }
+
+    .footer-a:hover {
+      color: red;
+    }
+    .contant{
+      display: block;
+    }
+
+    .contant-txt {
+      display: none;
+      width: 800px;
+      margin: 0 auto;
+      margin-top: 151px;
+      font-size: 15px;
+      line-height: 33px;
+      margin-bottom: 58px;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <div class="head">
+      <div class="head-tabs">
+        <a class="head-item" src="#javascript" onclick="checkOne()">公司介绍</a>
+        <a class="head-item" src="#javascript" onclick="checkTwo()">联系我们</a>
+      </div>
+    </div>
+    <div id="contant" class="contant">
+      <img class="img" src="./30.jpg" alt="">
+      <div class="intro">
+        <div>公司介绍</div>
+        <p>
+          深圳十里传媒科技有限公司成立于2021年03月11日，注册资金为100万人民币，注册地址：深圳市龙岗区横岗街道华侨新村社区荣德时代广场A3106。经营项目是：一般经营项目是：一般经营项目是：电脑图文设计；平面设计；广告设计；影视动画设计；动漫产品开发；从事广告业务；市场营销策划；品牌推广咨询；公关活动策划；服装鞋帽、化妆品、护肤用品、美容美发用品、旅游用品、体育用品、日用百货、母婴用品、家居用品的销售；经营电子商务；国内贸易。服装服饰批发；服装服饰零售。（除依法须经批准的项目外，凭营业执照依法自主开展经营活动）；教育咨询服务（不含涉许可审批的教育培训活动）；软件开发；业务培训（不含教育培训、职业技能培训等需取得许可的培训）。（除依法须经批准的项目外，凭营业执照依法自主开展经营活动），许可经营项目是：散装食品、预包装食品的销售；网站建设。第二类增值电信业务。（依法须经批准的项目，经相关部门批准后方可开展经营活动，具体经营项目以相关部门批准文件或许可证件为准）；广播电视节目制作经营；网络文化经营。（依法须经批准的项目，经相关部门批准后方可开展经营活动，具体经营项目以相关部门批准文件或许可证件为准）
+        </p>
+      </div>
+    </div>
+    <div id="contant_txt" class="contant-txt">
+      <div>联系我们</div>
+      <p>公司地址：深圳市龙岗区横岗街道华侨新村社区荣德时代广场A3106</p>
+    </div>
+    <div id="foot" class="footer">
+      <div class="footer-txt">
+        深圳十里传媒科技有限公司 版权所有 ICP备案：
+        <a class="footer-a" href="https://beian.miit.gov.cn" target="_blank">粤ICP备2023064432号</a>
+      </div>
+    </div>
+  </div>
+  <script>
+    const contant = document.getElementById('contant')
+    const contantTxt = document.getElementById('contant_txt');
+    const foot = document.getElementById('foot');
+    function checkOne(){
+      console.log(contant,contantTxt,111);
+      contant.style.display = 'block'
+      contantTxt.style.display = 'none'
+      foot.style.bottom = 'auto'
+    }
+    function checkTwo(){
+      console.log(222);
+      contant.style.display = 'none'
+      contantTxt.style.display = 'block'
+      foot.style.bottom = '0'
+    }
+
+  </script>
+</body>
+
+</html>
